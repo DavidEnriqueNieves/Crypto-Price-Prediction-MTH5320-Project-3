@@ -1,21 +1,5 @@
-Florida Institute of Technology
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Final Project: An Attempt at Predicting Cryptocurrency Prices using Neural Networks
+# Final Project: An Attempt at Predicting Cryptocurrency Prices using Neural Networks
 
 
 
@@ -30,11 +14,11 @@ Dr. Ryan White
 MTH 4320 
 12/14/2021
 
-**Abstract**
+## **Abstract**
 
 The basic idea behind this work is that young crypto-currency projects are based off social media exposure to spread the news and draw more people in. This project seeks to find a way to predict the trends of a cryptocurrency project. Note that due to complications with obtaining Social Media information about more obscure cryptocurrency projects, only Bitcoin is being considered due to the ample amount of Tweet information there is about it. Regardless, it is apparent from watching the state of the cryptocurrency markets and its reactions to influential figure’s tweets, that one could feasibly attempt predicting the trends of cryptocurrency prices from social media. This work attempts a naive version of this by trying out different Neural Network architectures such as Recurrent Neural Networks (RNN’s) and Long Short-Term Memory (LSTM’s) and attempting to predict future price activity. Unfortunately, due to difficulties in obtaining detailed social media information about obscure cryptocurrencies, the work was limited to using social media and price activity data about Bitcoin rather than any other cryptocurrencies. Moreover, it also details the effort needed to process the Bitcoin price and social media data into feature vectors that can be processed by Neural Networks, the ingestion of this data into a visualization engine known as Kibana, and finally, the logging of the performance of the models into a service known as Weights and Biases.
 
-**Introduction**
+## **Introduction**
 
 As anyone who has participated in the launch of a new cryptocurrency project may know, social media exposure is crucial for getting new members to join the project and invest in the asset, be it an initial coin offering or some other form of blockchain-utilizing technology. In this case, this work will focus on initial coin offerings (ICO’s) due to there being plentiful data and records with regards to most of them, and due to how direct the investment is. What is meant by the latter is the fact that users invest directly into the project via a currency conversion (usually Ethereum or Binance into the newly launched coin) and thus directly affect the price rather than some other form of investing such as social media. Coincidentally, however, the reason why social media matters in the first place is that because a lot of smaller cryptocurrencies do not demonstrate any meaningful technical contributions or any real future for the project. In other words, almost anyone who is investing in these types of cryptocurrencies knows that the project may carry momentum and yield Xprofits almost exclusively on the basis of social media exposure and on “how much the next guy will put in”. For that reason, the main line of reasoning for the inputs to any type of model trying to predict future movements in the price of the asset is not just the actual statistics regarding the asset (prices, lows, highs, openings, closings, specialized indicators, etc...) but also social media metrics such as how many combined views the social media account of the project obtained. It is for this very reason that whenever joining a new project’s telegram page (one of the most common ways of keeping in the know-how with the status of the coin), one will likely be asked to share, like, and follow al the posts and channels related to the project. Some other projects even reward would-be investors by directly handing out a quantity of the coins depending on how much the user has participated in sharing the project’s posts in an activity known as an “airdrop”.
 
@@ -44,7 +28,7 @@ Bitcoin, Ethereum,BinanceSmartChain,Other
 
 Note that although the concept of social media exposure is extremely important for young Cryptocurrency prices, it still affects even the biggest of cryptocurrencies such as Ethereum and Bitcoin. That can be considered (among other things) a significant flaw of this work’s approach. 
 
-**Literature Review**
+## **Literature Review**
 
 Trying to predict the movements of markets such something that many great minds have dedicated their efforts to.  Some examples include predicting Foreign Exchanges, local exchanges, the stock market, and more prominently, the market of cryptocurrencies. Due to Bitcoin’s special place in the cryptocurrency world, (especially due to its place as the highest valued cryptocurrency) there have been researchers attempting to predict how the price of Bitcoin will change. One such group of researchers, namely Sara Abdali and Ben Hoskins from Stanford University, attempted to predict the price of Bitcoin by using sentiment analysis of tweets solely related to Bitcoin. Their approach consisted of “simple “ models (Naive Bayes and Support Vector Machines) as well as a more complicated BERT transformer model. 
 
@@ -58,15 +42,15 @@ Another paper attempted to use what is known as a stochastic neural network, whi
 
 Relating more towards the work at hand, another study performed a comparison of different Machine Learning methods such as WaveNets, Recurrent Neural Networks, Support Vector Machines, Random Forests, ARIMA, and Long Short-Term Memory. I found this study to be the most informative for the purposes of this report since it compared methods from many different fields (Finance, Machine Learning, etc...) to provide a summary of their results. The data that was used for this work was very similar to the one used in this project (close, open, high, low prices, etc...). Curiously enough, they chose to exclude the years 2017 and 2018 due to them being considered outliers (lots of variance perhaps due to the crash throughout the winter). Their hyperparameter tuning in part consisted of random searches. For their LSTM models, they used the Adam optimizer as well as three layers (they tested more, but initial results did not seem too promising) and the hyperbolic tangent function.   Surprisingly, the LSTM model proved to be the second worst performing model, with SVR (support vector regression) and ARIMA as the best performing models (L. Felizardo et al). This helps to feed some scepticism on my part as to neural networks being a good approach for these chaotic systems. 
 
-**Outputs**
+## **Outputs**
 
 The outputs of the model were simply the logarithm of the opening, closing, high, and low prices. These were chosen like they were so as to avoid exploding gradients. Some more work could be done into choosing a way to standardize them. 
 
-**Model**
+## **Model**
 
 The three main models used are Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTMs), and finally, Transformers. The first model will serve as a basis for the other results. It is essentially a neural network that allows previous outputs to be used as inputs while having hidden states. As opposed to a regular feed forward neural network, this type has the advantage of taking into account historical information during the calculation of the output. Some of their disadvantages include the long computation times required for training them, and the loss of information from many time steps back due to the gradient usually vanishing (exploding gradients can happen with this type of model) (Amidi et al). On the other hand, Long Short-Term Memory units seek to manage the vanishing gradient problem by ... Finally, Transformers are types of models that make heavy use of attention mechanisms, which generally take into account inputs that are farther back than what would be possible with LSTMs and RNNs.
 
-Training
+## Training
 
 The data obtained was from Kaggle user Kash who works as a Data Scientist at Kaleidofin. It was comprised of several columns, primarily regarding information about Tweets that mention Bitcoin in the hashtag or in the actual content of the tweet itself. This data was then aggregated (see ProcessDateData.py) into all the activity for a given day. The following shows some examples of some samples obtained from the Twitter activity dataset:
 
@@ -134,7 +118,7 @@ From there, the data was augmented by adding random noise to it (within the prev
 
 ![A screenshot of a computer Description automatically generated with medium confidence](./images/Aspose.Words.75b88a02-aea9-458e-ad3c-2daf8349b990.007.png)
 
-**Results**
+## **Results**
 
 The models I tried were variations of a simple RNN architecture I tried out as a benchmark. That 
 
@@ -166,12 +150,12 @@ For the full details of the results of each run, the Weights and Biases page can
 
 the Jupyter Notebook (“Results.ipynb”). The best loss obtained was about 0.1154 in RunXII.
 
-**Conclusion**
+## **Conclusion**
 
 As with any model, this is an imperfect representation of the real world, especially taking into account the stochastic nature of the problem. Some features which should be taken into account are: the effects that real-world events have on the price of cryptocurrencies, most notably demonstrated with the effects of events such as the onset of the COVID-19 pandemic, the announcement of the IRS increasing its workforce to tackle crypto-related tax fraud, Elon Musk announcing that Tesla would accept cryptocurrencies and subsequently announcing that it could not accept cryptocurrencies, as well as China’s government cracking down on cryptocurrency activity, to name a few. With regards to this, one other significant price influencer not taken into account is the change that larger cryptocurrencies have on smaller cryptocurrencies. As a general principle, one will find that the activity and prices of the two largest cryptocurrencies by circulation (Bitcoin and Ethereum) have a significant effect on the price of smaller cryptocurrencies. Of course, part of this effect comes down to the previously mentioned influence that real-world events have on cryptocurrencies in general, so there is a bit of overlap between the last two mentioned events.  In addition, this approach assumes that simply sharing a tweet or posting on social media with a related hashtag will raise the popularity of the coin along with the price. There may be outliers where for some reason a crypto gets widely deemed to be a scam and thus receives many negative tweets and thus dissuades many people from investing in it. However, based upon a simple observation of the cryptocurrency social media space, this is likely uncommon.
 
 
-Works Cited
+## **Works Cited**
 
 Amidi, Afshine, and Shervine Amidi. “Recurrent Neural Networks Cheatsheet Star.” *CS 230 Recurrent Neural Networks Cheatsheet*, Stanford University, https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks. 
 
