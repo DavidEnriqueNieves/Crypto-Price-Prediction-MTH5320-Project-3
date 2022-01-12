@@ -157,24 +157,18 @@ As with any model, this is an imperfect representation of the real world, especi
 
 ## **Works Cited**
 
-Amidi, Afshine, and Shervine Amidi. “Recurrent Neural Networks Cheatsheet Star.” *CS 230 Recurrent Neural Networks Cheatsheet*, Stanford University, https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks. 
+* Amidi, Afshine, and Shervine Amidi. “Recurrent Neural Networks Cheatsheet Star.” *CS 230 Recurrent Neural Networks Cheatsheet*, Stanford University, https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks. 
 
-Derakhshan, Ali, en Hamid Beigy. “Sentiment analysis on stock social media 
-
+* Derakhshan, Ali, en Hamid Beigy. “Sentiment analysis on stock social media 
 for stock price movement prediction”. *Engineering Applications of Artificial Intelligence* 85 (2019): 569–578. Web.
-
 Georgoula, Ifigeneia and Pournarakis, Demitrios and Bilanakos, Christos and Sotiropoulos, 
 
-Dionisios and Sotiropoulos, Dionisios and Giaglis, George M., Using Time-Series and Sentiment Analysis to Detect the Determinants of Bitcoin Prices (May 17, 2015). Available at SSRN: <https://ssrn.com/abstract=2607167> or [http://dx.doi.org/10.2139/ssrn.2607167](https://dx.doi.org/10.2139/ssrn.2607167)
+* Dionisios and Sotiropoulos, Dionisios and Giaglis, George M., Using Time-Series and Sentiment Analysis to Detect the Determinants of Bitcoin Prices (May 17, 2015). Available at SSRN: <https://ssrn.com/abstract=2607167> or [http://dx.doi.org/10.2139/ssrn.2607167](https://dx.doi.org/10.2139/ssrn.2607167)
 
-[Karalevicius, V.](https://www.emerald.com/insight/search?q=Vytautas%20Karalevicius "Vytautas Karalevicius"), [Degrande, N.](https://www.emerald.com/insight/search?q=Niels%20Degrande "Niels Degrande") and [De Weerdt, J.](https://www.emerald.com/insight/search?q=Jochen%20De%20Weerdt "Jochen De Weerdt") (2018), "Using sentiment 
+* [Karalevicius, V.](https://www.emerald.com/insight/search?q=Vytautas%20Karalevicius "Vytautas Karalevicius"), [Degrande, N.](https://www.emerald.com/insight/search?q=Niels%20Degrande "Niels Degrande") and [De Weerdt, J.](https://www.emerald.com/insight/search?q=Jochen%20De%20Weerdt "Jochen De Weerdt") (2018), "Using sentiment analysis to predict interday Bitcoin price movements", [*Journal of Risk Finance*](https://www.emerald.com/insight/publication/issn/1526-5943), Vol. 19 No. 1, pp. 56-75. <https://doi.org/10.1108/JRF-06-2017-0092>
 
-analysis to predict interday Bitcoin price movements", [*Journal of Risk Finance*](https://www.emerald.com/insight/publication/issn/1526-5943), Vol. 19 No. 1, pp. 56-75. <https://doi.org/10.1108/JRF-06-2017-0092>
+* L. Felizardo, R. Oliveira, E. Del-Moral-Hernandez and F. Cozman, "Comparative study of Bitcoin price prediction using WaveNets, Recurrent Neural Networks and other Machine Learning Methods," *2019 6th International Conference on Behavioral, Economic and Socio-Cultural Computing (BESC)*, 2019, pp. 1-6, doi: 10.1109/BESC48373.2019.8963009
 
-L. Felizardo, R. Oliveira, E. Del-Moral-Hernandez and F. Cozman, "Comparative study of Bitcoin price 
+* P. Jay, V. Kalariya, P. Parmar, S. Tanwar, N. Kumar and M. Alazab, "Stochastic Neural Networks for 
 
-prediction using WaveNets, Recurrent Neural Networks and other Machine Learning Methods," *2019 6th International Conference on Behavioral, Economic and Socio-Cultural Computing (BESC)*, 2019, pp. 1-6, doi: 10.1109/BESC48373.2019.8963009
-
-P. Jay, V. Kalariya, P. Parmar, S. Tanwar, N. Kumar and M. Alazab, "Stochastic Neural Networks for 
-
-Cryptocurrency Price Prediction," in *IEEE Access*, vol. 8, pp. 82804-82818, 2020, doi: 10.1109/ACCESS.2020.2990659. 
+* Cryptocurrency Price Prediction," in *IEEE Access*, vol. 8, pp. 82804-82818, 2020, doi: 10.1109/ACCESS.2020.2990659. 
